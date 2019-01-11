@@ -3,6 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xam_Imiev.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <!--Estilos Botones Título-->
+            <Style x:Key="buttonTitle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="135" />
+                <Setter Property="HeightRequest" Value="36" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="4"/>
+            </Style>
 
+            <!--Fondo Cuadros Contenido StakLayout-->
+            <Style x:Key="colorStackLayout" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#BDBDBD" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

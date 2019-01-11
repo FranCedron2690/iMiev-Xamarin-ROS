@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using RosSharp.RosBridgeClient;
@@ -29,13 +30,13 @@ namespace Xam_Imiev.UWP
         {
             number_message = message.data;
 
-            Console.WriteLine(number_message);
+            Debug.WriteLine(number_message);
 
             isMessageReceived = true;
         }
         private void ProcessMessage()
         {
-            Console.WriteLine(number_message);
+            Debug.WriteLine(number_message);
         }
 
         /*private Vector3 GetPosition(RosSharp.RosBridgeClient.Messages.Navigation.Odometry message)

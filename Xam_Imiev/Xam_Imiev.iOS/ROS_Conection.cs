@@ -16,7 +16,7 @@ namespace Xam_Imiev.iOS
         public RosSocket RosSocket { get; private set; }
         public enum Protocols { WebSocketSharp, WebSocketNET, WebSocketUWP };
         public Protocols Protocol;
-        public string RosBridgeServerUrl = "ws://10.42.0.1:9090";
+        public string RosBridgeServerUrl = "ws://10.47.254.187:9090";
 
         private ManualResetEvent isConnected = new ManualResetEvent(false);
 

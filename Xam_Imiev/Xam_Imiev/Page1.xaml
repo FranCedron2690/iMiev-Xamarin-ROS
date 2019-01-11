@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:Xam_Imiev"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xam_Imiev.Page1">
+    <!--BackgroundColor="White"-->
+
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Contenido del título de la Page-->
+            <StackLayout x:Name="Title_Content" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+                         BackgroundColor="Black" Orientation="Horizontal" VerticalOptions="Start" Spacing="0">
+                <Button Text="WAYPOINTS" Style="{StaticResource buttonTitle}" BackgroundColor="Orange" Margin="22, 0,0,0"/>
+                <Button Text="REMOTE" Style="{StaticResource buttonTitle}" BackgroundColor="Gray"/>
+                <local:EntryText Placeholder="ws://10.47.254.187:9090" PlaceholderColor="Gray"
+                                 TextColor="Black" FontSize="12" HeightRequest="36" 
+                                 HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                                 WidthRequest="150" HorizontalTextAlignment="Center" Margin="175, 0,15,0"/>
+                <Button Text="ROS" HorizontalOptions="Center" WidthRequest="60" Margin="0,0,18, 0"/>
+                
+            </StackLayout>
+            <!---->
+
+            <!--Contenido Waypoints-->
+            <StackLayout x:Name="Content_Waypoints" Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"
+                     Orientation="Horizontal" Margin="22, 0, 0, 15">
+                <Label Text="WAYPOINTS INFO" TextColor="Black"/>
+            </StackLayout>
+            <!---->
+            
+            
+            <!--Parte derecha de la pantalla-->
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="195"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" Margin="8, 0, 22, 10">
+                    
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"  Margin="8, 0, 22, 15">
+                    <Label Text="50km/h" HorizontalOptions="Center" TextColor="Black" Margin="0,10, 0, 0"/>
+                    <Slider Minimum="0" Maximum="1" Value="0.5"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="bg_pestana_normal.png" HeightRequest="35" Aspect="AspectFit"/>
+                        <Image Source="bg_pestana_normal.png" HeightRequest="35" Aspect="AspectFit"/>
+                        <Image Source="bg_pestana_normal.png" HeightRequest="35" Aspect="AspectFit"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <!---->
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

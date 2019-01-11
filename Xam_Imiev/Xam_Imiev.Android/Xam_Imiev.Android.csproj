@@ -66,6 +66,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntryTextAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Node_Publisher.cs" />
     <Compile Include="Node_Subscriber.cs" />
@@ -105,7 +106,22 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\plantilla_Ventana_Waypoints.png" />
+    <AndroidResource Include="Resources\drawable\plantilla_ventana_waypoints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_pestana_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_pestana_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_title_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\title_bg_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\title_bg_selected.png" />
   </ItemGroup>
   <Import Project="..\Xam_Imiev\Xam_Imiev.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
