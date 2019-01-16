@@ -11,8 +11,8 @@ namespace Xam_Imiev
         {
             InitializeComponent();
 
-            //MainPage = new iMIEV_Diseño();
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart()

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:local="clr-namespace:Xam_Imiev"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xam_Imiev.Page1">
+             xmlns:local="clr-namespace:Xam_Imiev"
+             x:Class="Xam_Imiev.Remote">
     <!--BackgroundColor="White"-->
 
     <ContentPage.Resources>
@@ -22,14 +22,14 @@
             <!--Contenido del título de la Page-->
             <StackLayout x:Name="Title_Content" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
                          BackgroundColor="Black" Orientation="Horizontal" VerticalOptions="Fill" Spacing="0">
-                <Button Text="WAYPOINTS" ClassId="waypoints" Clicked="Title_Button_ClickAsync" Style="{StaticResource buttonTitle_Selected}" Margin="22, 0,0,0"/>
-                <Button Text="REMOTE" ClassId="remote" Clicked="Title_Button_ClickAsync" Style="{StaticResource buttonTitle_Normal}"/>
+                <Button Text="WAYPOINTS" ClassId="waypoints" Clicked="Title_Button_ClickAsync" Style="{StaticResource buttonTitle_Normal}" Margin="22, 0,0,0"/>
+                <Button Text="REMOTE" ClassId="remote" Clicked="Title_Button_ClickAsync" Style="{StaticResource buttonTitle_Selected}"/>
                 <local:EntryText Placeholder="ws://10.47.254.187:9090" PlaceholderColor="Gray"
                                  TextColor="Black" FontSize="12" HeightRequest="36" 
                                  HorizontalOptions="End" VerticalOptions="Center"
                                  WidthRequest="150" HorizontalTextAlignment="Center" Margin="130, 0,15,0"/>
                 <Button Text="ROS" HorizontalOptions="End" WidthRequest="60" Margin="0,0,17, 0"/>
-                
+
             </StackLayout>
             <!---->
 
@@ -50,7 +50,7 @@
                     <RowDefinition Height="195" x:Name="GridDchaRow0"/>
                     <RowDefinition Height="*" x:Name="GridDchaRow1"/>
                 </Grid.RowDefinitions>
-                
+
                 <!--Actions-->
                 <StackLayout x:Name="Actions" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
                              Orientation="Vertical" Margin="8, 10, 15, 10" IsEnabled="False" IsVisible="False">
@@ -129,7 +129,7 @@
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
-                
+
                 <!--Conduccion-->
                 <StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"  Margin="8, 0, 15, 15">
                     <Label Text="50km/h" HorizontalOptions="Center" TextColor="Black" Margin="0,10, 0, 0"/>

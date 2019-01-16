@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Xam_Imiev
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class Remote : ContentPage
 	{
-		public Page1 ()
+		public Remote ()
 		{
 			InitializeComponent ();
             this.SizeChanged += ScreenSizeChange;
@@ -26,7 +25,7 @@ namespace Xam_Imiev
 
             //Como no se puede coger el valor de GridGeneral1Row1.Heigth porque tiene asignado el valor *, debo calcular la altura de el Row Dcha con la Height
             //general de la pantalla
-            GridDchaRow0.Height = ((Height  / 10) * 9) / 1.5f;
+            GridDchaRow0.Height = ((Height / 10) * 9) / 1.5f;
         }
 
         private async void Title_Button_ClickAsync(object sender, EventArgs args)
@@ -44,7 +43,7 @@ namespace Xam_Imiev
             }
         }
 
-            private void Info_Active_Content(object sender, EventArgs args)
+        private void Info_Active_Content(object sender, EventArgs args)
         {
             Button btn = (Button)sender;
 
@@ -66,6 +65,7 @@ namespace Xam_Imiev
                     Activar_Info_Section(IMU, true);
                     break;
             }
+
         }
 
         private void Activar_Info_Section(StackLayout stacklayout, bool valor)

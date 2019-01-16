@@ -5,9 +5,31 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Estilos Botones Título-->
-            <Style x:Key="buttonTitle" TargetType="Button">
+            <Style x:Key="buttonTitle_Normal" TargetType="Button">
                 <Setter Property="WidthRequest" Value="135" />
                 <Setter Property="HeightRequest" Value="36" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="4"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style x:Key="buttonTitle_Selected" TargetType="Button">
+                <Setter Property="WidthRequest" Value="135" />
+                <Setter Property="HeightRequest" Value="36" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="4"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Orange"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+
+            <!--Estilos Botones Título-->
+            <Style x:Key="buttonPestana" TargetType="Button">
+                <Setter Property="WidthRequest" Value="75" />
+                <Setter Property="HeightRequest" Value="28" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="BorderRadius" Value="4"/>
             </Style>
