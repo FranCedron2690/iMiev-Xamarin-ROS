@@ -33,14 +33,22 @@
             </StackLayout>
             <!---->
 
-            <!--Contenido Waypoints-->
-            <StackLayout x:Name="Content_Waypoints" Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"
-                     Orientation="Horizontal" Margin="15, 10, 0, 15">
-                <Label Text="WAYPOINTS INFO" TextColor="Black" Style="{DynamicResource TitleStyle}"/>
-            </StackLayout>
-            <!---->
-            
-            
+            <!--Contenido Conducción-->
+            <RelativeLayout Grid.Column="0" Grid.Row="1" Style="{DynamicResource colorRelativeLayout}"
+                            Margin="15, 10, 0, 15">
+                <Image Source="carretera.png" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+                <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                    <StackLayout BackgroundColor="{StaticResource AlphaRecuadroConduccion}" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="70" WidthRequest="80" Margin="10,10,0,0">
+                        <Label Text="35 km/h" TextColor="Black" Margin="10,10,0,0"/>
+                        <Label Text="P" TextColor="Black" Margin="10,0,0,0"/>
+                    </StackLayout>
+                    <Image Source="volante.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="150"/>
+                    <Image Source="Stop.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" Margin="0,0,0,16"/>
+                </Grid>
+            </RelativeLayout>
+
             <!--Parte derecha de la pantalla-->
             <Grid Grid.Column="1" Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -55,8 +63,6 @@
                 <StackLayout x:Name="Actions" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
                              Orientation="Vertical" Margin="8, 10, 15, 10" IsEnabled="False" IsVisible="False">
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
-                                TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
                         <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
                                 TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
                         <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
@@ -81,8 +87,6 @@
                 <StackLayout x:Name="GPS" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
                              Orientation="Vertical" Margin="8, 10, 15, 10" IsEnabled="False" IsVisible="False">
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
-                                TextColor="White" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
                         <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
                                 TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
                         <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
@@ -107,8 +111,6 @@
                 <StackLayout x:Name="IMU" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
                              Orientation="Vertical" Margin="8, 10, 15, 10">
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
-                                TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
                         <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
                                 TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
                         <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 

@@ -4,6 +4,22 @@
              x:Class="Xam_Imiev.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="AlphaRecuadroConduccion">
+                <x:Arguments>
+                    <x:Double>.216</x:Double>
+                    <x:Double>.216</x:Double>
+                    <x:Double>.216</x:Double>
+                    <x:Double>.365</x:Double>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="ButtonTextColor">
+                <x:Arguments>
+                    <x:Double>.4</x:Double>
+                    <!-- R/255 -->
+                    <x:Double>.62</x:Double>
+                    <x:Double>.95</x:Double>
+                </x:Arguments>
+            </Color>
             <!--Estilos Botones Título-->
             <Style x:Key="buttonTitle_Normal" TargetType="Button">
                 <Setter Property="WidthRequest" Value="135" />
@@ -36,6 +52,10 @@
 
             <!--Fondo Cuadros Contenido StakLayout-->
             <Style x:Key="colorStackLayout" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#BDBDBD" />
+            </Style>
+            <!--Fondo Cuadros Contenido StakLayout-->
+            <Style x:Key="colorRelativeLayout" TargetType="RelativeLayout">
                 <Setter Property="BackgroundColor" Value="#BDBDBD" />
             </Style>
         </ResourceDictionary>
