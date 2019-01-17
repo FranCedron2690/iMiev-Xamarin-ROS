@@ -49,18 +49,11 @@ namespace Xam_Imiev
 
             switch (btn.ClassId)
             {
-                case "actions":
-                    Activar_Info_Section(Actions, true);
-                    Activar_Info_Section(GPS, false);
-                    Activar_Info_Section(IMU, false);
-                    break;
                 case "gps":
-                    Activar_Info_Section(Actions, false);
                     Activar_Info_Section(GPS, true);
                     Activar_Info_Section(IMU, false);
                     break;
                 case "imu":
-                    Activar_Info_Section(Actions, false);
                     Activar_Info_Section(GPS, false);
                     Activar_Info_Section(IMU, true);
                     break;
@@ -68,7 +61,7 @@ namespace Xam_Imiev
 
         }
 
-        private void Activar_Info_Section(StackLayout stacklayout, bool valor)
+        private void Activar_Info_Section(Frame stacklayout, bool valor)
         {
             stacklayout.IsEnabled = valor;
             stacklayout.IsVisible = valor;

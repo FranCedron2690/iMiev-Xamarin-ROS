@@ -34,10 +34,12 @@
             <!---->
 
             <!--Contenido Waypoints-->
-            <StackLayout x:Name="Content_Waypoints" Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"
-                     Orientation="Horizontal" Margin="15, 10, 0, 15">
+            <Frame  Grid.Column="0" Grid.Row="1" BackgroundColor="{StaticResource GrayFondoCuadros}" Margin="15, 10, 0, 15">
+            <StackLayout x:Name="Content_Waypoints"
+                     Orientation="Horizontal" >
                 <Label Text="WAYPOINTS INFO" TextColor="Black" Style="{DynamicResource TitleStyle}"/>
             </StackLayout>
+            </Frame>
             <!---->
             
             
@@ -52,94 +54,100 @@
                 </Grid.RowDefinitions>
                 
                 <!--Actions-->
-                <StackLayout x:Name="Actions" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
-                             Orientation="Vertical" Margin="8, 10, 15, 10" IsEnabled="False" IsVisible="False">
-                    <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
-                                TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
-                        <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
-                                TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                        <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
-                                TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                    </StackLayout>
+                <Frame x:Name="Actions" Grid.Column="0" Grid.Row="0" BackgroundColor="{StaticResource GrayFondoCuadros}" Margin="8, 10, 15, 10" Padding="0" 
+                       IsEnabled="False" IsVisible="False">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
+                                    TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
+                            <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
+                                    TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
+                            <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
+                                    TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
+                        </StackLayout>
 
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="RECORD"/>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="RECORD"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                </Frame>
                 <!--GPS-->
-                <StackLayout x:Name="GPS" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
-                             Orientation="Vertical" Margin="8, 10, 15, 10" IsEnabled="False" IsVisible="False">
-                    <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
-                                TextColor="White" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                        <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
-                                TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
-                        <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
-                                TextColor="White" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                    </StackLayout>
+                <Frame x:Name="GPS" Grid.Column="0" Grid.Row="0" BackgroundColor="{StaticResource GrayFondoCuadros}" Margin="8, 10, 15, 10" Padding="0" 
+                       IsEnabled="False" IsVisible="False">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
+                                    TextColor="White" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
+                            <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
+                                    TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
+                            <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
+                                    TextColor="White" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
+                        </StackLayout>
 
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="RECORD"/>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="RECORD"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                </Frame>
                 <!--IMU-->
-                <StackLayout x:Name="IMU" Grid.Column="0" Grid.Row="0" Style="{StaticResource colorStackLayout}" 
-                             Orientation="Vertical" Margin="8, 10, 15, 10">
-                    <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
+                <Frame x:Name="IMU" Grid.Column="0" Grid.Row="0" BackgroundColor="{StaticResource GrayFondoCuadros}" Margin="8, 10, 15, 10" Padding="0">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Button Text="ACTIONS" ClassId="actions" Style="{StaticResource buttonPestana}"
                                 TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                        <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
+                            <Button Text="GPS" ClassId="gps" Style="{StaticResource buttonPestana}" 
                                 TextColor="Black" BackgroundColor="Gray" Clicked="Info_Active_Content"/>
-                        <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
+                            <Button Text="IMU" ClassId="imu" Style="{StaticResource buttonPestana}" 
                                 TextColor="White" BackgroundColor="Black" Clicked="Info_Active_Content"/>
-                    </StackLayout>
+                        </StackLayout>
 
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="START"/>
-                            <Button Text="RECORD"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Button Text="RECORD"/>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="START"/>
+                                <Button Text="RECORD"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="RECORD"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
-                </StackLayout>
-                
+                </Frame>
                 <!--Conduccion-->
-                <StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource colorStackLayout}"  Margin="8, 0, 15, 15">
-                    <Label Text="50km/h" HorizontalOptions="Center" TextColor="Black" Margin="0,10, 0, 0"/>
-                    <Slider Minimum="0" Maximum="1" Value="0.5"/>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Button WidthRequest="65"/>
-                        <Button WidthRequest="65"/>
-                        <Button WidthRequest="65"/>
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0"  Style="{StaticResource colorStackLayout}"  Margin="8, 0, 15, 15">
+                    <StackLayout>
+                        <Label Text="50km/h" HorizontalOptions="Center" TextColor="Black" Margin="0,10, 0, 0"/>
+                        <Slider Minimum="0" Maximum="1" Value="0.5"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Button WidthRequest="65"/>
+                            <Button WidthRequest="65"/>
+                            <Button WidthRequest="65"/>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                </Frame>
             </Grid>
             <!---->
             

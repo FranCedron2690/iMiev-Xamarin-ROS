@@ -4,27 +4,22 @@
              x:Class="Xam_Imiev.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="AlphaRecuadroConduccion">
-                <x:Arguments>
-                    <x:Double>.216</x:Double>
-                    <x:Double>.216</x:Double>
-                    <x:Double>.216</x:Double>
-                    <x:Double>.365</x:Double>
-                </x:Arguments>
-            </Color>
+            <Color x:Key="AlphaRecuadro">#59D8D8D8</Color> <!--Definido en RGB no lo coge bien-->
+            <Color x:Key="GrayFondoCuadros">#BDBDBD</Color>
             <Color x:Key="ButtonTextColor">
                 <x:Arguments>
                     <x:Double>.4</x:Double>
                     <!-- R/255 -->
                     <x:Double>.62</x:Double>
                     <x:Double>.95</x:Double>
+                    <x:Double>1.0</x:Double>
                 </x:Arguments>
             </Color>
             <!--Estilos Botones Título-->
             <Style x:Key="buttonTitle_Normal" TargetType="Button">
                 <Setter Property="WidthRequest" Value="135" />
                 <Setter Property="HeightRequest" Value="36" />
-                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="BorderRadius" Value="4"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="TextColor" Value="Black"/>
@@ -34,7 +29,7 @@
             <Style x:Key="buttonTitle_Selected" TargetType="Button">
                 <Setter Property="WidthRequest" Value="135" />
                 <Setter Property="HeightRequest" Value="36" />
-                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="BorderRadius" Value="4"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="TextColor" Value="White"/>

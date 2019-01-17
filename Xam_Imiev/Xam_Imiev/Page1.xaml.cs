@@ -68,7 +68,7 @@ namespace Xam_Imiev
             }
         }
 
-        private void Activar_Info_Section(StackLayout stacklayout, bool valor)
+        private void Activar_Info_Section(Frame stacklayout, bool valor)
         {
             stacklayout.IsEnabled = valor;
             stacklayout.IsVisible = valor;

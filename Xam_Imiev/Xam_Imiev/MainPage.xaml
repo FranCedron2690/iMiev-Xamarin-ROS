@@ -5,14 +5,15 @@
              x:Class="Xam_Imiev.MainPage">
 
     <StackLayout Padding="100,75,100,0">
-            <!-- Place new controls here -->
+        <!-- Place new controls here -->
         <Button x:Name="but_ConectarROS" Text="Conectar a ROS" Clicked="ConectarROS"/>
         <Button x:Name="but_Publicar_Nodo" Text="Publicar Nodo" Clicked="Publicar_Nodo"/>
         <Button x:Name="but_Subscribir_Nodo" Text="Subscribir a Nodo" Clicked="Subscribir_Nodo"/>
         <Button x:Name="but_DesconectarROS" Text="Desconectar ROS" Clicked="DesconectarROS"/>
         <Label x:Name="label1" Text="" />
+        <Frame CornerRadius="10" OutlineColor="AliceBlue">
+            <Label Text="sadasd"/>
+        </Frame>
     </StackLayout>
-    
-    
 
 </ContentPage>
